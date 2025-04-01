@@ -52,22 +52,31 @@ function createUI() {
     .translation-result {
       display: block;
       margin: 12px 0;
-      padding: 14px 18px;
-      border: 2px dashed #a0a0a0;
+      padding: 16px 20px;
+      border: 2px dashed #4a90e2;
       border-radius: 8px;
-      color: #2c3e50;
       font-size: 15px;
       line-height: 1.6;
       background: #f8f9fa;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       position: relative;
       z-index: 1000;
       transition: all 0.2s ease;
     }
+    .translation-result .original-text {
+      color: #2c3e50;
+      margin-bottom: 8px;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed #e0e0e0;
+    }
+    .translation-result .translated-text {
+      color: #4a90e2;
+      font-weight: 500;
+    }
     .translation-error {
       color: #ff6b6b;
       background: rgba(255,107,107,0.1);
-      border: 1px dashed #ff6b6b;
+      border: 2px dashed #ff6b6b;
     }
     #translator-progress {
       display: flex !important;
@@ -78,13 +87,15 @@ function createUI() {
       color: white;
       font-weight: 500;
       opacity: 0.95;
+      padding: 15px 20px;
+      border-radius: 8px;
     }
     .progress-bar {
       width: 100%;
       height: 6px;
-      background: rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.3);
       border-radius: 3px;
-      margin-top: 8px;
+      margin-top: 10px;
       overflow: hidden;
     }
     .progress-bar-fill {
@@ -96,17 +107,23 @@ function createUI() {
     }
     .loading-paragraph {
       position: relative;
-      padding-left: 24px;
+      padding: 16px 20px 16px 50px;
+      background: #f0f7ff;
+      border: 2px dashed #4a90e2;
+      border-radius: 8px;
+      color: #4a90e2;
+      font-weight: 500;
+      margin: 12px 0;
     }
     .loading-paragraph::before {
       content: '';
       position: absolute;
-      left: 0;
+      left: 20px;
       top: 50%;
-      width: 16px;
-      height: 16px;
-      margin-top: -8px;
-      border: 2px solid #4a90e2;
+      width: 20px;
+      height: 20px;
+      margin-top: -10px;
+      border: 3px solid #4a90e2;
       border-top-color: transparent;
       border-radius: 50%;
       animation: spin 1s linear infinite;
